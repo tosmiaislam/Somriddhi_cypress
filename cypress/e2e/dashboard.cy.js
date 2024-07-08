@@ -1,0 +1,1 @@
+cy.get(':nth-child(1) > .nav-link > .fa').click();
