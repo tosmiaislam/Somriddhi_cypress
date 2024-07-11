@@ -2,11 +2,12 @@
 
 describe('template spec', () => {
     it('passes', () => {
-      cy.visit('https://somriddhi.eksheba.gov.bd')
+      cy.visit('https://biman.ekpay.gov.bd')
       cy.fixture('idPass').then((data)=>{
       cy.get("input[placeholder='01XXXXXXXXX']").type(data.email); 
       cy.get("input[placeholder='Enter password']").type(data.password);
-      cy.get("button[class='btn tes px-5 mt-4 fs-15 w-100']").click();
+      cy.get('.login-form > .text-center > .btn').click();
+      cy.get('.menu-is-opening > [href="#"] > p > .right').click();
      
     //   cy.get('.HomePage-service > .MuiTypography-root').click().wait(3000);
     //   cy.xpath("//div[@class='AppHeader-sectionDesktop MuiBox-root css-0']//i[@class='flag flag-24 flag-bd']").click();
